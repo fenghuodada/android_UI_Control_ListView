@@ -2,6 +2,7 @@ package com.example.list_view;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -105,6 +106,7 @@ public class Baselist extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Toast.makeText(Baselist.this, "点击成功", Toast.LENGTH_SHORT).show();
+                Log.d("baselist","点击事件运行成功");
             }
         });
 

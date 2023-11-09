@@ -11,25 +11,115 @@
     android:orientation="vertical"
     android:layout_height="match_parent">
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:id="@+id/button"
+        android:textSize="20dp"
         android:onClick="toArrary_list"
-        android:text="Array_list"/>
+        android:text="文本列表"/>
     <Button
         android:id="@+id/button_2"
         android:onClick="toSimple_list"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="simple_list"/>
+        android:textSize="20dp"
+        android:text="简单列表"/>
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Base_List"
+        android:text="复杂列表"
+        android:textSize="20dp"
         android:id="@+id/button_3"
         android:onClick="toBase_list"
         android:layout_gravity="center"/>
+
+    <Button
+        android:id="@+id/button_4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:onClick="choose_text"
+        android:text="界面选择"
+        android:textSize="20dp" />
+    <Button
+        android:id="@+id/button_5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="单个参数传递"
+        android:onClick="result"
+        android:textSize="20dp"/>
+    <Button
+        android:id="@+id/button_6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:text="数据包传递"
+        android:onClick="PacketDelivery"
+        android:layout_gravity="center"/>
+
+    <Button
+        android:id="@+id/button_7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:layout_gravity="center"
+        android:onClick="ParameterCallback"
+        android:text="参数回传"/>
+    <Button
+        android:id="@+id/button_8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:text="电话界面跳转"
+        android:onClick="phone"/>
+    <Button
+        android:id="@+id/button_9"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:onClick="http"
+        android:text="网址跳转按钮"/>
+    <Button
+        android:id="@+id/button_10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:text="发短息按钮"
+        android:onClick="send"/>
+    <Button
+        android:id="@+id/button_11"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:onClick="music"
+        android:text="音乐播放按钮"/>
+    <Button
+        android:id="@+id/button_12"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="卸载应用--爱奇艺"
+        android:textSize="20dp"
+        android:onClick="UnInstallation"/>
+    <Button
+        android:id="@+id/button_13"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="安装应用--爱奇艺"
+        android:textSize="20dp"
+        android:onClick="Installation"/>
+<Button
+    android:id="@+id/button_14"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:textSize="20dp"
+    android:text="打开外部应用--去除默认项"
+    android:onClick="DefaultApp"/>
+
+
+
+
 </LinearLayout>
 </ScrollView>

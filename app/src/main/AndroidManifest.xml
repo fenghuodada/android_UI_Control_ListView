@@ -13,36 +13,81 @@
         android:theme="@style/Theme.List_view"
         tools:targetApi="31">
         <activity
-            android:name=".SimpleList"
-            android:label="simpleList"
+            android:name=".ParameterCallback"
             android:parentActivityName=".MainActivity"
-            android:exported="false">
+            android:exported="false" />
+        <activity
+            android:name=".BuddlePack"
+            android:exported="false"
+            android:parentActivityName=".MainActivity"/>
+        <activity
+            android:name=".Calculate"
+            android:parentActivityName=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SimpleList"
+            android:exported="true"
+            android:label="simpleList"
+            android:parentActivityName=".MainActivity">
+            <intent-filter>
+       <!--         <action android:name="Simple" /> &lt;!&ndash; 多个action的设立可以使不同的按钮打开这个界面 &ndash;&gt;
+                <action android:name="text" />
+                <action android:name="ax" />
+
+                <category android:name="Simple" />-->
+                <action android:name="TextActivity"/>
+                <category android:name="android.intent.category.Simple"/>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
             android:name=".Baselist"
+            android:exported="true"
             android:label="BaseList"
-            android:parentActivityName=".MainActivity"
-            android:exported="false">
+            android:parentActivityName=".MainActivity"> <!-- 界面跳转的出口是否可以跳转到外部应用 -->
+            <!-- 负值的优先级 大于整数的优先级，一般浏览器的prority也就是优先级是正数 -->
+            <!-- mineType和Uri的声明是要么一起出现，要么只能有一个出现，在intent中出现的是什么，在intent-filter中声明的是什么 -->
+            <intent-filter
+                android:priority="1000"
+                tools:ignore="AppLinkUrlError">
+<!--                <action android:name="ax" /> &lt;!&ndash; 设置动作 &ndash;&gt;
+                <action android:name="text" />
+                <action android:name="android.intent.action.VIEW" />
+                &lt;!&ndash; <data android:scheme="https" android:host="www.baidu.com"/> &ndash;&gt;
+                <category android:name="android.intent.category.APP_MAPS" />-->
+                <action android:name="TextActivity"/>
+                <category android:name="android.intent.category.BaseList"/>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
             android:name=".Arrarylist"
+            android:exported="true"
             android:label="ArrayList"
-            android:parentActivityName=".MainActivity"
-            android:exported="false">
+            android:parentActivityName=".MainActivity">
+            <intent-filter>
+<!--                <action android:name="Arrarylist" />-->
+                <action android:name="TextActivity" />
+                <category android:name="android.intent.category.ArraryList"/>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
             android:name=".MainActivity"
-            android:label="MainActivity"
-            android:exported="true">
+            android:exported="true"
+            android:label="MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
